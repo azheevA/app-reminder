@@ -1,0 +1,121 @@
+:host {
+  color: white;
+
+}
+
+.reminder-form {
+  margin: 100px 20px;
+  padding: 40px 50px;
+  background-color: #282c34;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+
+
+  h4{
+    margin: 3px;
+  }
+  .columns {
+    display: grid;
+    grid-template-columns: 2fr 0fr 5fr;
+    gap: 25px;
+    justify-content: space-between;
+  }
+
+  .column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+  }
+  .column-cover{
+    display: grid;
+    height: 100%;
+    grid-template-rows: 20% 65%;
+    gap: 5%;
+  }
+  .button-group {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+  }
+
+  .addition {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+}
+
+mat-form-field {
+  background-color: #d9dae1;
+  border-radius: 8px;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+
+  input, textarea {
+    color: white;
+  }
+
+  mat-label, mat-select, mat-option {
+    color: #000000;
+  }
+
+  &:focus-within {
+    background-color: #ffffff;
+  }
+}
+
+.full-width {
+  width: 100%;
+}
+
+
+
+@media (max-width: 768px) {
+  .reminder-form {
+    padding: 20px 10px;
+
+    .columns {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    .button-group {
+      justify-content: center;
+    }
+
+    .addition {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+}
+
+.set-time {
+  position: relative;
+
+}
+
+app-calendar, app-clock {
+  position: absolute;
+  top: 0;
+  left: calc(100% + 10px);;
+  z-index: 10;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+button{
+  background-color: #3f51b5;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #c7cbe5;
+  }
+}
+

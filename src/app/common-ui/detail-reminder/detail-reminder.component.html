@@ -1,0 +1,61 @@
+<div class="reminder-form">
+  <div class="title">
+    <div class="title-reminder">
+      <h4>Создать напоминание</h4>
+    </div>
+  </div>
+  <div class="columns">
+    <div class="column">
+
+      <mat-form-field appearance="outline" class="full-width">
+        <input matInput
+               placeholder="Дата создания"
+               [value]="reminder.creationDate | date:'short'"
+               readonly
+               (click)="onDateInputClick('creationDate')"
+        >
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <input matInput
+               placeholder="Дата выполнения"
+               [value]="reminder.completionDate | date:'short'"
+               readonly
+               (click)="onDateInputClick('completionDate')"
+        >
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        Статус
+        <mat-select [(value)]="reminder.status">
+          <mat-option *ngFor="let status of statuses" [value]="status">
+            {{status.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+    </div>
+    <div class="set-time">
+      <app-calendar *ngIf="showCalendar" (dateSelect)="onDateSelect($event)" (close)="closeCalendar()"></app-calendar>
+      <app-clock *ngIf="showClock" (timeSelect)="onTimeSelect($event)" (close)="closeClock()"></app-clock>
+    </div>
+    <div class="column-cover">
+      <mat-form-field appearance="outline" class="full-width">
+        <input matInput
+               placeholder="Краткое описание"
+               [(ngModel)]="reminder.shortDescription">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <textarea matInput
+                  placeholder="Полное описание"
+                  [(ngModel)]="reminder.fullDescription"></textarea>
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div class="button-group">
+    <button mat-raised-button color="primary" class="btn" (click)="saveReminder()">Сохранить</button>
+    <button mat-raised-button color="warn" class="btn" (click)="router.navigate(['/reminders'])">Назад</button>
+  </div>
+</div>

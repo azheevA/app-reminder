@@ -1,0 +1,20 @@
+<div class="clock">
+  <div class="header">
+    <h5>Текущее время</h5>
+
+  </div>
+  <div class="time-part">
+    {{ hours | number: '2.0' }} : {{ minutes | number: '2.0' }} : {{ seconds | number: '2.0' }}
+  </div>
+  <button (click)="closeClock()" class="close-btn">X</button>
+
+  <div class="time-display">
+    <input class="time-part" type="number" [value]="hours" (input)="updateHours($event)" min="0" max="23" />
+    <div class="time-separator">:</div>
+    <input class="time-part" type="number" [value]="minutes" (input)="updateMinutes($event)" min="0" max="59" />
+    <div class="time-separator">:</div>
+    <input class="time-part" type="number" [value]="seconds" (input)="updateSeconds($event)" min="0" max="59" />
+  </div>
+
+  <button (click)="saveTime()" class="save-btn">Сохранить время</button>
+</div>
