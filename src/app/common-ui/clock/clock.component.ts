@@ -63,10 +63,8 @@ export class ClockComponent implements OnInit, OnDestroy {
   }
 
   saveTime() {
-
     const time =
       `${this.hours.toString().padStart(2, '0')}:${this.minutes.toString().padStart(2, '0')}:${this.seconds.toString().padStart(2, '0')}`;
-
     this.timeSelect.emit(time);
 
   }

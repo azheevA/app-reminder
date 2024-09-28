@@ -52,8 +52,16 @@
                   [(ngModel)]="reminder.fullDescription"></textarea>
       </mat-form-field>
     </div>
-  </div>
 
+
+  </div>
+  <div class="bottom-group"></div>
+  <div class="horizontal-list-block">
+    <div class="horizontal-list">
+      <div class="small-block" *ngFor="let item of savedDone">{{ item }}</div>
+    </div>
+    <button mat-raised-button color="accent" class="edit-button" (click)="router.navigate(['/todo'])">Изменить</button>
+  </div>
   <div class="button-group">
     <button mat-raised-button color="primary" class="btn" (click)="saveReminder()">Сохранить</button>
     <button mat-raised-button color="warn" class="btn" (click)="router.navigate(['/reminders'])">Назад</button>

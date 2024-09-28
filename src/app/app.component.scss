@@ -1,0 +1,5 @@
+.app-container {
+  max-height: calc(100vh - 80px); // 80px - высота футера
+  display: flex;
+  flex-direction: column;
+}

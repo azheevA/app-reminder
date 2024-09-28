@@ -13,8 +13,10 @@ import {
 } from "@angular/material/table";
 import {Reminder} from "../../models/reminder.model";
 import {ReminderService} from "../../services/remider.service";
-import {DatePipe} from "@angular/common";
+import {DatePipe, NgForOf, NgIf} from "@angular/common";
 import {MatButton} from "@angular/material/button";
+import {HeaderComponent} from "../header/header.component";
+import {FooterComponent} from "../footer/footer.component";
 
 
 @Component({
@@ -32,14 +34,18 @@ import {MatButton} from "@angular/material/button";
     MatRow,
     MatHeaderRowDef,
     DatePipe,
-    MatButton
+    MatButton,
+    NgForOf,
+    NgIf,
+    HeaderComponent,
+    FooterComponent
 
   ],
   templateUrl: './reminder-list.component.html',
   styleUrl: './reminder-list.component.scss'
 })
 export class ReminderListComponent implements OnInit {
-  displayedColumns: string[] = ['status', 'shortDescription', 'creationDate', 'completionDate'];
+
   reminders: Reminder[] = [];
 
   reminder!: Reminder;

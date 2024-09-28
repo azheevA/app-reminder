@@ -3,12 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 import {ReminderListComponent} from "./common-ui/reminder-list/reminder-list.component";
 import {DetailReminderComponent} from "./common-ui/detail-reminder/detail-reminder.component";
 import {CalendarComponent} from "./common-ui/calendar/calendar.component";
+import {DraggingTodoComponent} from "./common-ui/dragging-todo/dragging-todo.component";
 
 export const routes: Routes = [
   { path: 'reminders', component: ReminderListComponent },
   { path: 'reminder/new', component: DetailReminderComponent },
   { path: 'reminder/:id', component: DetailReminderComponent },
   { path: 'calendar', component: CalendarComponent },
+  { path: 'todo', component: DraggingTodoComponent },
   { path: '', redirectTo: '/reminders', pathMatch: 'full' }
 ];
 
