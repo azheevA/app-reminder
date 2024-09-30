@@ -31,6 +31,9 @@ export class ReminderService {
     new Reminder(8,'Почистить ванну',
       'Необходимо также проверить наличие шампуня и геля для душа, а также прочисить от волос сливную трубу',
       null, null, STATUSES[2],[T.Task1, T.Task2]),
+    new Reminder(9,'Пройти бездну',
+      '',
+      null, null, STATUSES[2],[T.Task1, T.Task2]),
 
   ];
 
