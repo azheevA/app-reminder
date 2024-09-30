@@ -48,4 +48,5 @@
   Ссылку на GitHub Pages: [https://azheeva.github.io/app-reminder/](https://azheeva.github.io/app-reminder/).
    ## ссылка для связи со мной
    
-     моя почта: [sazheev@gmail.com](mailto:sazheev@gmail.com)
+   моя почта: [Связаться со мной](mailto:sazheev@gmail.com)
+
