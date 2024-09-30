@@ -1,6 +1,7 @@
 # Приложение "Напоминания"
 ## Простое Angular-приложение для создания, редактирования и управления напоминаниями с указанием дат и статусов.
 Ссылку на GitHub Pages: [https://azheeva.github.io/app-reminder/](https://azheeva.github.io/app-reminder/)
+
 Технологии
 
     - Angular (v14+)
